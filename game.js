@@ -5,9 +5,10 @@ var level = 0;
 var started = false;
 
 // start the game
-  $(document).on("keypress", (function() {
+  $(".start-btn").on("click", (function() {
     if (!started){
       nextSequence();
+      $(".start-btn").addClass("visible");
       $(".final-ranking").text(" ");
       $("h2").text(" ");
       started=true;
@@ -64,7 +65,7 @@ function checkAnswer(currentLevel) {
     setTimeout(function(){
       $("body").removeClass("game-over");
     }, 200);
-    $('h1').text("Game Over, Press Any Key to Restart");
+    $('h1').text("Game Over");
     startOver();
   }
 }
@@ -72,6 +73,7 @@ function checkAnswer(currentLevel) {
 
 function startOver(){
   level--;
+  $(".start-btn").removeClass("visible");
   $('h2').text("Last Completed level " + level + "!");
   $(".final-ranking").addClass("final-score");
   if (level <= 5){

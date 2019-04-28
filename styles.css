@@ -19,7 +19,6 @@ body {
   display: block;
   width: 50%;
   margin: auto;
-
 }
 
 .btn {
@@ -30,18 +29,42 @@ body {
   border: 10px solid black;
   border-radius: 20%;
 }
-
+.start-btn{
+  width: 60%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  color: white;
+  background: #4C8FFB;
+  border: 1px #3079ED solid;
+  box-shadow: inset 0 1px 0 #80B0FB;
+  border-radius: 3%;
+  display: inline-block;
+}
+.start-btn:hover {
+    border: 1px #2F5BB7 solid;
+    box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;
+    background: #3F83F1;
+}
 .game-over {
   background-color: red;
   opacity: 0.8;
 }
 
+.row{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .red {
   background-color: red;
+
 }
 
 .green {
   background-color: green;
+
 }
 
 .blue {
@@ -55,4 +78,59 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+.visible{
+  visibility: hidden
+}
+@media only screen and (max-width: 600px){
+
+  .red {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .green {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .blue {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .yellow {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .final-score{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    margin:  5%;
+    color: #FEF2BF;
+  }
+
+}
+
+@media only screen and (min-width: 600px){
+
+  .red {
+    max-width: 250px;
+    max-height: 250px;
+  }
+  .green {
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  .blue {
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  .yellow {
+    max-width: 250px;
+    max-height: 250px;
+  }
+
 }
